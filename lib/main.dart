@@ -68,6 +68,13 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
+  Future _handleRefresh() async {
+    var c = new Completer();
+    _refreshInfo();
+    c.complete(1);
+    return c.future;
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -75,7 +82,10 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.teal[900],
         title: new Text(widget.title),
       ),
-      body: ListView.builder(
+      body: new RefreshIndicator(
+        onRefresh: _handleRefresh,
+      child: ListView.builder(
+          physics: const AlwaysScrollableScrollPhysics(),
           shrinkWrap: true,
           itemCount: _info.Linee.length + 1,
           itemBuilder: (context, index) {
@@ -125,6 +135,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: new Column(
                     mainAxisSize: MainAxisSize.min, children: content));
           }),
-    );
+    ));
   }
 }
