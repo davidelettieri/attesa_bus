@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:attesa_bus/parsing_atac.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -52,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return AtacPageParser.parse(result);
   }
 
-  void _refreshInfo() async {
+  void _refreshInfo() {
     var value = _controller.text;
 
     if (value == "") {
@@ -75,6 +73,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return c.future;
   }
 
+  Future _submitted(String value) async {
+    await _handleRefresh();
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -94,9 +96,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: new Column(
                   children: <Widget>[
                     new ListTile(
-                        title: TextField(
+                      title: TextField(
                       controller: _controller,
-                      onEditingComplete:  _refreshInfo,
                       decoration: InputDecoration(
                         hintText: 'Inserisci il numero della fermata',
                         suffixIcon: IconButton(
@@ -104,6 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           onPressed: _refreshInfo,
                         ),
                       ),
+                        onSubmitted: _submitted,
                     )),
                     new ListTile(
                       leading: const Icon(Icons.place),

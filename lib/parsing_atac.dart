@@ -1,4 +1,3 @@
-import 'package:html/parser.dart' show parse;
 import 'package:html/dom.dart';
 
 class AtacPageParser {
@@ -42,7 +41,6 @@ class AtacPageParser {
           return result;
         }
         catch(e) {
-          //crashlytics.logException(e);
           var r = new AtacFermataInfo();
           r.Nome = "Fermata non trovata, riprovare.";
           return r;
