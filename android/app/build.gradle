@@ -36,6 +36,8 @@ android {
     }
 
     defaultConfig {
+        versionCode 2
+        versionName "1.0.1"
         applicationId "it.davidelettieri.attesabusatac"
         minSdkVersion 16
         targetSdkVersion 27

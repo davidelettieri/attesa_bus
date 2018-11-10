@@ -3,7 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/attesa_bus.iml" filepath="$PROJECT_DIR$/attesa_bus.iml" />
-      <module fileurl="file://$PROJECT_DIR$/attesa_bus_android.iml" filepath="$PROJECT_DIR$/attesa_bus_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/build/app/generated/source/buildConfig/buildConfig.iml" filepath="$PROJECT_DIR$/build/app/generated/source/buildConfig/buildConfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/build/app/intermediates/manifests/full/debug/debug.iml" filepath="$PROJECT_DIR$/build/app/intermediates/manifests/full/debug/debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/app/src/main/main.iml" filepath="$PROJECT_DIR$/android/app/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/build/app/intermediates/merged_manifests/release/processReleaseManifest/merged/merged.iml" filepath="$PROJECT_DIR$/build/app/intermediates/merged_manifests/release/processReleaseManifest/merged/merged.iml" />
+      <module fileurl="file://$PROJECT_DIR$/build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/processDebugResources.iml" filepath="$PROJECT_DIR$/build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/processDebugResources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/build/app/generated/not_namespaced_r_class_sources/release/processReleaseResources/processReleaseResources.iml" filepath="$PROJECT_DIR$/build/app/generated/not_namespaced_r_class_sources/release/processReleaseResources/processReleaseResources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/build/app/generated/source/r/r.iml" filepath="$PROJECT_DIR$/build/app/generated/source/r/r.iml" />
     </modules>
   </component>
 </project>

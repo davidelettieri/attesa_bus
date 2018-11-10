@@ -1,5 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="davidelettieri.github.io.attesabus">
+    package="davidelettieri.github.io.attesabus"
+    android:versionCode="2"
+    android:versionName="1.0.1">
 
     <!-- The INTERNET permission is required for development. Specifically,
          flutter needs it to communicate with the running application
@@ -15,7 +17,8 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="Attesa Bus"
-        android:icon="@mipmap/busstop">
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
