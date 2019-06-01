@@ -35,8 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController _controller = new TextEditingController();
 
   Future<AtacFermataInfo> readAtacWebSite(String fermata) async {
-    HttpClientRequest request = await HttpClient().post("www.atac.roma.it", 80,
-        "/function/pg_previsioni_arrivo.asp?pa_src=" + fermata);
+    HttpClientRequest request = await HttpClient().postUrl(Uri.parse("https://www.atac.roma.it/function/pg_previsioni_arrivo.asp?pa_src=" + fermata));
     HttpClientResponse response = await request.close();
 
     var temp = await response.transform(utf8.decoder).toList();
